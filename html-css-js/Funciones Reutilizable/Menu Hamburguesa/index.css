@@ -70,4 +70,20 @@ section{
 	width: 100%;
 	max-width:var(--container-width);
 	min-height: 100vh;
+	text-align: center;
+}
+
+panel-btn{
+	position: fixed;
+	z-index: 999;
+	bottom: 1vh;
+	right: 1vw;
+	width: 4rem;
+	height: 4rem;
+	border-radius: 50%;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--main-color);
 }
