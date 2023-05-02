@@ -1,0 +1,234 @@
+/*$ Reseteo */
+
+:root {
+	--main-font: sans-serif;
+	--font-size: 16px;
+	--main-color: #f7de1e;
+	--second-color: #383838;
+	--main-modal-color: rgba(247, 222, 30, 0.85);
+	--second-modal-color: rgba(56, 56, 56, 0.85);
+	--container-width: 1200px;
+}
+
+html {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-size: var(--font-size);
+	font-family: var(--main-font);
+	scroll-behavior: smooth; /*$ Le da el efecto de transicion de una sección a otra */
+}
+*,
+*::after,
+*::before {
+	box-sizing: inherit;
+}
+
+::-webkit-scrollbar {
+	width: 0px; /*$ Elimina ScroolBar Lateral */
+}
+
+body {
+	margin: 0;
+	overflow-x: hidden; /*$ Todo lo que se desborde en horizantal, se oculte */
+}
+
+img {
+	/*$ Imagenes que se adapten a la maxima anchura de su contenedor */
+	max-width: 100%;
+	height: auto;
+}
+
+/*$ **********  Menú Hamburguesa  **********  */
+
+.hamburger {
+	cursor: pointer;
+	transition-property: opacity, filter;
+	transition-duration: 0.15s;
+	transition-timing-function: linear;
+	font: inherit;
+	color: inherit;
+	text-transform: none;
+	border: 0;
+	margin: 0;
+	overflow: visible;
+}
+.hamburger:hover {
+	opacity: 0.7;
+}
+.hamburger.is-active:hover {
+	opacity: 0.7;
+}
+.hamburger.is-active .hamburger-inner,
+.hamburger.is-active .hamburger-inner::before,
+.hamburger.is-active .hamburger-inner::after {
+	background-color: #000;
+}
+
+.hamburger-box {
+	width: 40px;
+	height: 20px;
+	align-items: center;
+	display: inline-block;
+	position: relative;
+}
+
+.hamburger-inner {
+	display: block;
+	top: 50%;
+	margin-top: -2px;
+}
+.hamburger-inner,
+.hamburger-inner::before,
+.hamburger-inner::after {
+	width: 40px;
+	height: 4px;
+	background-color: #000;
+	border-radius: 4px;
+	position: absolute;
+	transition-property: transform;
+	transition-duration: 0.15s;
+	transition-timing-function: ease;
+}
+.hamburger-inner::before,
+.hamburger-inner::after {
+	content: '';
+	display: block;
+}
+.hamburger-inner::before {
+	top: -10px;
+}
+.hamburger-inner::after {
+	bottom: -10px;
+}
+
+.hamburger--vortex .hamburger-inner {
+	transition-duration: 0.2s;
+	transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+}
+.hamburger--vortex .hamburger-inner::before,
+.hamburger--vortex .hamburger-inner::after {
+	transition-duration: 0s;
+	transition-delay: 0.1s;
+	transition-timing-function: linear;
+}
+.hamburger--vortex .hamburger-inner::before {
+	transition-property: top, opacity;
+}
+.hamburger--vortex .hamburger-inner::after {
+	transition-property: bottom, transform;
+}
+
+.hamburger--vortex.is-active .hamburger-inner {
+	transform: rotate(765deg);
+	transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+}
+.hamburger--vortex.is-active .hamburger-inner::before,
+.hamburger--vortex.is-active .hamburger-inner::after {
+	transition-delay: 0s;
+}
+.hamburger--vortex.is-active .hamburger-inner::before {
+	top: 0;
+	opacity: 0;
+}
+.hamburger--vortex.is-active .hamburger-inner::after {
+	bottom: 0;
+	transform: rotate(90deg);
+}
+
+.header {
+	position: sticky; /*$ El header cuando llegue a la posición top: 0, se va  comportar de manera fija */
+	top: 0;
+	padding: 1rem; /*$ es a los 4 lados de 1rem */
+	background-color: var(--main-color);
+	color: var(--second-color);
+}
+
+.header h1 {
+	margin: 0;
+	text-align: center;
+}
+
+.section {
+	padding: 2rem;
+	padding-top: 4rem;
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+	max-width: var(--container-width);
+	min-height: 100vh;
+	text-align: center;
+}
+
+.panel {
+	position: fixed;
+	z-index: 998;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	overflow-y: auto;
+	background-color: var(--second-modal-color);
+	opacity: 0;
+	visibility: hidden;
+	transition: transform 0.8s ease, opacity 0.5s ease;
+	/* De arriba */
+	/* transform: translate(0, -100%); */
+	/* De abajo */
+	transform: translate(0, 100%);
+	/* De la derecha */
+	/* transform: translate(100%, 0); */
+	/* De la izquierda */
+	/* transform: translate(-100%, 0); */
+}
+
+.panel.is-active {
+	transform: translate(0, 0);
+	opacity: 1;
+	visibility: visible;
+}
+
+.panel-btn {
+	position: fixed;
+	z-index: 999;
+	bottom: 1vh;
+	right: 1vw;
+	width: 4rem;
+	height: 4rem;
+	border-radius: 50%;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--main-color);
+}
+
+.menu {
+	width: inherit;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+	text-align: center;
+}
+
+.menu a {
+	padding: 2rem;
+	width: inherit;
+	display: block;
+	font-size: 1.5rem;
+	text-decoration: none;
+	color: var(--main-color);
+	transition: all 0.3s ease;
+}
+
+.menu a:hover {
+	font-weight: bold;
+	color: var(--second-color);
+	background-color: var(--main-modal-color);
+}

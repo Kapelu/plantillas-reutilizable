@@ -1,0 +1,23 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #052744;
+    color: white;
+  }
+  
+  @font-face {
+    font-family: dankmono;
+    src: url('/font/DankMono-Italic.otf');
+    font-display: swap;
+  }
+  
+  main {
+    padding-top: 200px;
+    text-align:center;
+    font-family: dankmono;
+    font-size: 60px;
+    max-width: 80ch;
+    color: bisque;    
+  }
+  
