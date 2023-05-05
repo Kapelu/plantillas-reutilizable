@@ -1,3 +1,7 @@
-import darkTheme from "./theme-dark.js"
+import responsiveMedia from "./objeto-responsivo.js"
 
-darkTheme('.dark-theme-btn', 'dark-mode')
+const d = document
+
+d.addEventListener('DOMContentLoaded', (e)=>{
+    responsiveMedia('youtube', '(min-width: 1024px', 'Contenido Móvil', 'Contenido Escritorio' )
+})

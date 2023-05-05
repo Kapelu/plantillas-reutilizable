@@ -1,5 +1,6 @@
 const d = document
 const w = window
 
-export default function darkTheme(btn, classDark) {
+export default function responsiveMedia(id, mq, mobileContent) {
+    let breaakpoint = w.matchMedia(mq)
 }
