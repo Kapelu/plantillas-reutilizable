@@ -1,0 +1,67 @@
+[
+  {
+    "title": "programación básica",
+    "img": "../imgs/dev-content/1prog-basica.png",
+    "id": "img-"
+  },
+  {
+    "title": "Pensamiento Lógico",
+    "img": "../imgs/dev-content/2pens-logico.jpeg",
+    "id": "img-"
+  },
+  {
+    "title":"HTML5-CSS",
+    "img": "../imgs/dev-content/3html5-css.png",
+    "id": "img-"
+  },
+  {
+    "title":"Responsive Design",
+    "img": "../imgs/dev-content/4responsive.png",
+    "id":"img-"
+  },
+  {
+    "title":"Css Grid",
+    "img":"../imgs/dev-content/5css-grid.png",
+    "id":"img-"
+  },
+  {
+    "title":"HTML y CSS",
+    "img":"../imgs/dev-content/6html-css.png",
+    "id":"img-"
+  },
+  {
+    "title":"Básico de JS",
+    "img":"../imgs/dev-content/7basic-js.png",
+    "id":"img-"
+  },
+  {
+    "title":"Fundamentos de JS",
+    "img":"../imgs/dev-content/8fund-js.png",
+    "id":"img-"
+  },
+  {
+    "title":"De Jquery a JS",
+    "img":"../imgs/dev-content/9jquery.png",
+    "id":"img-"
+  },
+  {
+    "title":"Ecma 6+",
+    "img":"../imgs/dev-content/10ecma6.png",
+    "id":"img-"
+  },
+  {
+    "title":"Bootstrap",
+    "img":"../imgs/dev-content/11bootstrap.png",
+    "id":"img-"
+  },
+  {
+    "title":"Python",
+    "img":"../imgs/dev-content/12python.jpg",
+    "id":"img-"
+  },
+  {
+    "title":"Java SE",
+    "img":"../imgs/dev-content/13javaSE.jpg",
+    "id":"img-"
+  }
+]
