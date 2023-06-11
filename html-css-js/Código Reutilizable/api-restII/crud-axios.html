@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>AJAX: Asynchronous JavaScript & XML</title>
+		<link rel="stylesheet" href="./style/style.css" />
+		<link rel="stylesheet" href="./style/api-rest.css" />
+	</head>
+
+	<body>
+		
+		<header class="header">
+			<h1><em> API REST </em></h1>
+		</header>
+		<main class="main">
+				
+            <h2>¿Qué es una <em>API</em>?</h2>
+			<p>
+				Una <em><strong>API</strong></em> (<em
+					><strong>Application Programming Interface</strong></em
+				>), o Interfaz de Programación de Aplicaciones, es un conjunto
+				de rutinas que provee acceso a funciones de un determinado
+				<em>software</em>, para efectos de esta nota, acceso a las
+				funciones de nuestros sitios y aplicaciones <em>web</em>.
+			</p>
+			<p>
+				Dentro de los navegadores <em>web</em> tenemos 2 tipos de
+				<em>APIs</em>:
+			</p>
+			<ol>
+				<li>
+					<strong><em>APIs</em> nativas</strong>, como el
+					<em>DOM</em> que es el <em>API</em> que nos permite acceder
+					al código <em>HTML</em> de nuestros documentos a través de
+					<em>JavaScript</em> o la de Geolocalización que no permite
+					acceder a las coordendas terrestres de nuestra ubicación
+					actual; y,
+				</li>
+				<li>
+					<strong><em>APIs</em> externas</strong>, como la de
+					<em>Twitter</em> que nos permite obtener los últimos tweets
+					de un usuario, o la de <em>GitHub</em> que nos permite
+					obtener la información de los repositorios de una cuenta o
+					como la <em>API</em> de <em>WordPress</em> que nos permite
+					acceder a la información de páginas y entradas de un sitio.
+				</li>
+			</ol>
+			<p>
+				La mayoría de <em>APIs</em> externas del desarrollo
+				<em>web</em> actual, funcionan con la Arquitectura
+				<em><strong>REST</strong></em
+				>.
+			</p>
+			<h2 id="¿qué-es-rest">¿Qué es <em>REST</em>?</h2>
+			<p>
+				El término <em><strong>REST</strong></em> (<em
+					><strong>Representational State Transfer</strong></em
+				>) o Transferencia de Estado Representacional, se originó en el
+				año 2000, descrito en la
+				<a
+					href="https://es.wikipedia.org/wiki/Transferencia_de_Estado_Representacional"
+					target="_blank"
+					rel="noopener"
+					>tesis</a
+				>
+				de <em>Roy Fielding</em>, padre de la especificación
+				<em>HTTP</em>.
+			</p>
+			<p>
+				Un servicio <em><strong>REST</strong></em> es un conjunto de
+				restricciones con las que podemos crear un estilo de
+				arquitectura de <em>software</em>, la cual podremos usar para
+				crear aplicaciones <em>web</em> respetando el protocolo
+				<em>HTTP</em>.
+			</p>
+			<p>
+				Hoy en día la mayoría de las empresas utilizan
+				<em><strong>API REST</strong></em> para crear servicios. Esto se
+				debe a que es un estándar lógico y eficiente para la creación de
+				servicios <em>web</em>.
+			</p>
+			<p>
+				Según <em>Fielding</em> las restricciones que definen a un
+				sistema <em><strong>API REST</strong></em> o
+				<em><strong>RESTful</strong></em> como también se le conoce,
+				son:
+			</p>
+			<ul>
+				<li>
+					<strong>Cliente-Servidor</strong>, esta restricción mantiene
+					al cliente y al servidor débilmente acoplados. Esto quiere
+					decir que el cliente no necesita conocer los detalles de
+					implementación del servidor y el servidor se olvida de
+					entender cómo son usados los datos que envía al cliente.
+				</li>
+				<li>
+					<strong>Sin Estado</strong>, significa que cada petición
+					recibida por el servidor debería ser independiente, es
+					decir, no es necesario mantener sesiones.
+				</li>
+				<li>
+					<strong>Cacheable</strong>, debe admitir un sistema de
+					almacenamiento en <em>caché</em>, lo que evitará repetir
+					varias conexiones entre el servidor y el cliente para
+					recuperar un mismo recurso.
+				</li>
+				<li>
+					<strong>Interfaz Uniforme</strong>, significa una interfaz
+					genérica para administrar cada interacción que se produzca
+					entre el cliente y el servidor de manera uniforme, lo cual
+					simplifica y separa la arquitectura. Esta restricción indica
+					que cada recurso del servicio
+					<em><strong>REST</strong></em> debe tener una única
+					dirección (<em>URL</em>) <em>web</em>, a estas rutas se les
+					da el nombre de <em><strong>endpoints</strong></em
+					>.
+				</li>
+				<li>
+					<strong>Sistema de Capas</strong>, el servidor puede
+					disponer de varias capas para su implementación. Esto ayuda
+					a mejorar la escalabilidad, el rendimiento y la seguridad.
+				</li>
+			</ul>
+			<p>
+				Si creas aplicaciones <em>web</em> con <em>JavaScript</em>, las
+				<em>API REST</em> probablemente serán la forma principal de
+				obtener datos para tus aplicaciones, así como la de enviar datos
+				hacia una base de datos.
+			</p>
+			<p>
+				Así que... ...sí las <em>API REST</em>, son el nuevo
+				<em>CRUD</em> del desarrollo moderno, con la ventaja de que
+				puedes desacoplar tu la lógica de tu cliente de la del servidor
+				y la base de datos.
+			</p>
+			<p><img class="imagenes" src="./assets/img/crud.png" alt="CRUD" /></p>
+			<div class="container-table">
+				<table class="blueTable">
+					<thead>
+						<tr>
+							<th>Operaciones <em>CRUD</em></th>
+							<th>Peticiones <em>REST</em></th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><em>CREATE</em></td>
+							<td><em>POST</em></td>
+						</tr>
+						<tr>
+							<td><em>READ</em></td>
+							<td><em>GET</em></td>
+						</tr>
+						<tr>
+							<td><em>UPDATE</em></td>
+							<td><em>PUT</em></td>
+						</tr>
+						<tr>
+							<td><em>DELETE</em></td>
+							<td><em>DELETE</em></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+			<p><img class="imagenes" src="./assets/img/rest-crud.png" alt="REST - CRUD" /></p>
+			<p>
+				Otra ventaja de este modelo de desarrollo es que puedes usar un
+				mismo origen de datos para distintos clientes, por ejemplo un
+				cliente nativo (<em>iOS</em>, <em>Android</em>), un cliente de
+				escritorio (<em>Windows</em>) o un cliente
+				<em>web</em> (Navegadores).
+			</p>
+			<p><img class="imagenes" src="./assets/img/rest-arquitectura.png" alt="Arquitectura REST"/></p> 
+		
+
+			<br /><br /><br />
+			<h3 style="text-align: center">Creando un <em>API REST</em>- AXIOS</h3>
+			<br /><br /><br />
+			<div class="container">
+			<section class="crud">
+				<article>
+					<h2 class="crud-title">Agregar Santo</h2>
+					<form class="crud-form">
+						<input type="text" name="nombre" placeholder="nombre" required/>
+						<br />
+						<input type="text" name="constelacion" placeholder="constelación" required/>
+						<br />
+						<input type="submit" value="Enviar" />
+						<input type="hidden" name="id" />
+					</form>
+				</article>
+				<article>
+					<h2>Ver Santos</h2>
+					<table class="crud-table">
+						<thead>
+							<tr>
+								<th>Nombre</th>
+								<th>Constelación</th>
+								<th>Acciones</th>
+							</tr>
+						</thead>
+						<tbody></tbody>
+					</table>
+				</article>
+			</section>
+			<template id="crud-template">
+				<tr>
+					<td class="name"></td>
+					<td class="constellation"></td>
+					<td>
+						<button class="edit">Editar</button>
+						<button class="delete">Eliminar</button>
+					</td>
+				</tr>
+			</template>
+		</div>
+			<br><br><br>
+			<p></p>
+		</main>
+		<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+		<script src="./script/crud-axios.js"></script>
+	</body>
+</html>

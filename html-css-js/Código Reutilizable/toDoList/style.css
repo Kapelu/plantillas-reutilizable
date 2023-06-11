@@ -1,0 +1,42 @@
+/*$ Reseteo de Paul Irish*/
+
+:root {
+	--main-font: sans-serif;
+	--font-size: 16px;
+	--main-color: #f7df1e;
+	--second-color: #222;
+	--main-modal-color: #f7de1ed9;
+	--second-modal-color: rgba(34, 34, 34, 0.85);
+	--container-width: 1200px;
+}
+
+html {
+	background-color: #6b6b6b;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-size: var(--font-size);
+	font-family: var(--main-font);
+	scroll-behavior: smooth; /*$ Le da el efecto de transicion de una seccion a otra */
+}
+*,
+*::after,
+*::before {
+	box-sizing: inherit;
+}
+
+/*$ Elimina ScroolBar Lateral */
+
+::-webkit-scrollbar {
+	width: 0px;
+}
+::-webkit-scrollbar-track {
+	background: #fff;
+}
+::-webkit-scrollbar-thumb {
+	background: #fff;
+}
+
+h1{
+	text-align: center;
+}

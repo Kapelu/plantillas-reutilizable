@@ -1,0 +1,197 @@
+/*$ ********** Variables de colores y fuente ********** */
+:root {
+	/*# Colores */
+	--first-color: #444444af;
+	--first-alpha-color: rgba(59, 134, 134, 0.75);
+	--second-color: #79bd9a;
+	--second-alpha-color: rgba(121, 189, 154, 0.75);
+	--third-color: #a8dba8;
+	--third-alpha-color: rgba(168, 219, 168, 0.75);
+	--white-color: #fff;
+	--gray-light-color: #f3f3f3;
+	--gray-color: #ccc;
+	--gray-dark-color: #666;
+	--black-color: #000;
+	--link-color: #509ee3;
+	--title-color: #333;
+	--text-color: #222;
+	--white-alpha-color: rgba(255, 255, 255, 0.5);
+	--black-alpha-color: rgba(0, 0, 0, 0.5);
+	/*# Fuente */
+	--font: 'Gentium Book Plus', serif, sans-serif;
+
+	--max-width: 1200px;
+	--header-height: 4rem;
+}
+
+/*$ ********** Scrollbar ********** */
+
+::-webkit-scrollbar {
+	width: 0px;
+}
+::-webkit-scrollbar-track {
+	background: #fff;
+}
+::-webkit-scrollbar-thumb {
+	background: #fff;
+}
+
+/*$ ********** Reseteo Tank you Paul Irish ********** */
+
+html {
+	box-sizing: border-box;
+	font-family: var(--font);
+	font-size: 16px;
+	background-color: var(--first-color);
+}
+
+*,
+*::after,
+*::before {
+	box-sizing: inherit;
+}
+
+body {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 992px;
+	color: var(--text-color);
+}
+
+a {
+	color: var(--link-color);
+	transition: all 0.5s ease-out;
+}
+
+a:hover {
+	opacity: 0.75;
+}
+
+h1 {
+	margin: 0;
+	font-size: 2rem;
+	text-align: center;
+	color: #373688;
+}
+
+h2 {
+	margin: 0;
+	font-size: 1.5rem;
+	text-align: center;
+	color: #373688bd;
+}
+
+h3 {
+	margin: 0;
+	font-size: 1.25rem;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+p {
+	line-height: 1.6;
+}
+
+.nombre {
+	margin: 0;
+	font-weight: 800;
+	font-size: 2.5rem;
+	text-align: center;
+	color: #4745a5fa;
+}
+
+.redes-sociales {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.acerca {
+	padding: 0;
+	text-align: justify;
+	color: #f1ebeb;
+}
+
+.acerca img {
+	border-radius: 50%;
+	width: 300px;
+	height: 380px;
+	object-fit: cover;
+	object-position: 0 50%;
+}
+
+.float-right {
+	float: right;
+}
+
+.shape-1 {
+	margin: 2rem 2rem 2rem 0;
+	shape-outside: circle();
+}
+
+.habilidades a {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+
+/*
+$ ********** CARDS **********
+*/
+
+.proyectos {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+}
+
+.cards {
+    width: 350px;
+    height: 450px;
+	display: inline-block;
+	padding: 20px 30px;
+	border-radius: 20px;
+	border: 1px rgba(211, 211, 211, 0.486) solid;
+	margin: 10px;
+	transition: 0.6s;
+}
+
+.cards:hover {
+	transition: 0.6s;
+	box-shadow: 5px 5px 20px lightgray;
+}
+
+.perfil {
+	width: 120px;
+	border-radius: 50%;
+	margin-bottom: 10px;
+	padding: 2px;
+}
+
+.cards p {
+	color: rgb(255, 255, 255);
+}
+
+a > img{
+	width: 10px;
+	border-radius: 50%;
+	margin-bottom: 10px;
+	padding: 2px;
+}
+.github{
+    width: 40px;
+    height: 40px;
+}
+
+.centered-element {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
